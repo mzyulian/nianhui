@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>特殊</title>
+
+</head>
+<body>
+<div>
+    <button onclick="special()">重构数据库</button>
+</div>
+<div id="tt"></div>
+<script type=text/javascript src=/static/js/manifest.2ae2e69a05c33dfc65f8.js></script><script type=text/javascript src=/static/js/vendor.651746a706181f227f90.js></script><script type=text/javascript src=/static/js/app.c2b808c71b0deb0583b8.js></script>
+<script>
+    function special() {
+        $.ajax({
+            type: "get",
+            url: "/lucky/and",
+            dataType: "text",
+            success: function (response) {
+                alert(response);
+                if (response.state == 1){
+                    $("#tt").html("<spen>重构成功</spen>");
+                }
+                $("#tt").html("<spen>重构失败</spen>");
+            }
+        });
+    }
+</script>
+</body>
+</html>
